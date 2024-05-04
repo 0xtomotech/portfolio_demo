@@ -8,9 +8,12 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
+
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -77,13 +80,17 @@ const Intro = () => {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 transition group-hover:translate-x-2" />{" "}
         </Link>
 
         <a
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
           href="/CV.pdf"
           download
         >
@@ -92,7 +99,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://Linkedin.com"
           target="_blank"
         >
@@ -100,7 +107,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
           href="https://github.com/0xtomotech"
           target="_blank"
         >
