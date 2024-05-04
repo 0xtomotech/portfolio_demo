@@ -37,7 +37,7 @@ const About = () => {
           If you’ve got a lap, I’ve got some snuggles to share!
         </span>
       </p>
-      <p className="mb-12">
+      <p className="">
         Don't let my sunny, duck-watching days fool you—I'm a bit of a
         scaredy-dog when it comes to thunderstorms. As soon as those booms
         start, you can find me transforming into a{" "}
