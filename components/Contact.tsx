@@ -31,7 +31,7 @@ const Contact = () => {
       </p>
 
       <form
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -48,11 +48,11 @@ const Contact = () => {
           name="senderEmail"
           required
           maxLength={500}
-          className="borderBlack h-14 rounded-lg border px-4 outline-gray-900"
+          className="borderBlack h-14 rounded-lg border px-4 outline-gray-900 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           placeholder="Your email"
         />
         <textarea
-          className="borderBlack my-3 h-52 rounded-lg p-4 outline-gray-900"
+          className="borderBlack my-3 h-52 rounded-lg p-4 outline-gray-900 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100"
           name="message"
           placeholder="Your message"
           required

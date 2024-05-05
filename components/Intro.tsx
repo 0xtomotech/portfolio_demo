@@ -9,11 +9,13 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTheme } from "@/context/theme-context";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
 
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { theme } = useTheme();
 
   return (
     <section
@@ -32,7 +34,7 @@ const Intro = () => {
             }}
           >
             <Image
-              src="/popi.JPG"
+              src={theme === "dark" ? "/popi.JPG" : "/rizsi2.png"}
               alt="Popi"
               width={192}
               height={192}
@@ -43,7 +45,7 @@ const Intro = () => {
           </motion.div>
 
           <motion.span
-            className="absolute bottom-2 right-2 text-6xl"
+            className="absolute bottom-2 right-2 text-5xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -53,7 +55,7 @@ const Intro = () => {
               duration: 0.7,
             }}
           >
-            🥕
+            {theme === "dark" ? "🥕" : "🎾"}
           </motion.span>
         </div>
       </div>
@@ -90,7 +92,7 @@ const Intro = () => {
         </Link>
 
         <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="/CV.pdf"
           download
         >
@@ -99,7 +101,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://Linkedin.com"
           target="_blank"
         >
@@ -107,7 +109,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full border bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://github.com/0xtomotech"
           target="_blank"
         >
