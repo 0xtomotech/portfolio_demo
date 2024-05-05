@@ -18,7 +18,7 @@ const Contact = () => {
       className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <SectionHeading>Contact</SectionHeading>

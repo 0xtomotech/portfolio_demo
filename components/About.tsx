@@ -17,36 +17,42 @@ const About = () => {
       transition={{ delay: 0.125 }}
       id="about"
     >
-      <SectionHeading>About Me</SectionHeading>
+      <SectionHeading>About Me & My Sister</SectionHeading>
+
       <p className="mb-12">
-        Life's a romp with my sister <span className="font-medium">Rizsi</span>{" "}
-        around! We have a classic{" "}
-        <span className="italic">love-hate relationship</span>—one minute we're
-        wrestling for the title of Queen of the Couch, the next, we're the
-        snuggle champions of the living room. It's a ruff life, but someone's
-        got to live it!
+        Around here, life is never dull! We might tussle over who's the boss of
+        the toy basket, but when it comes to cuddle time, we're a team. Whether
+        we're plotting to snag some treats or racing to claim the coziest lap,
+        we're always in sync—even when we're in a feisty mood!
       </p>
 
       <p className="mb-12">
-        And let’s not forget about my partner in crime,{" "}
-        <span className="font-medium">Tomo</span>. We're a legendary duo, always
-        on the hunt for sneaky treats or a sunny spot for a nap. After a day
-        filled with adventures, I love curling up for a good cuddle.{" "}
-        <span className="font-bold">
-          {" "}
-          If you’ve got a lap, I’ve got some snuggles to share!
-        </span>
+        Our days are filled with mischief and play, but nothing compares to our
+        pre-walk jitters. I, Rizsi, get so excited I could spin just like
+        Gabner's head spins! And Popi, well, she's there, wagging along,
+        probably dreaming about adevnutres with her parner in crime, Tomo, and
+        oh boy, they are a legendary duo. After our adventures, it's all about
+        the snuggles—
+        <span className="font-medium">
+          if you've got the lap, we've got the love.
+        </span>{" "}
+        Mono is our favourite human pillow!
       </p>
+
+      <p className="mb-12">
+        But let's talk fears—thunderstorms turn me, Popi, into a nervous wreck,
+        hiding under the first toilet I can find. Rizsi tries to play it cool,
+        often distracted by those sneaky cats outside. It's tough being brave,
+        but together, we manage, turning our home into a fortress of comfort on
+        stormy days.
+      </p>
+
       <p className="">
-        Don't let my sunny, duck-watching days fool you—I'm a bit of a
-        scaredy-dog when it comes to thunderstorms. As soon as those booms
-        start, you can find me transforming into a{" "}
-        <span className="italic">blanket burrito</span> under the nearest cover.
-        But hey, every superhero has their kryptonite, right? On bright days,
-        though, I'm all about that{" "}
-        <span className="font-medium">sunbathing life</span>, soaking up rays
-        and keeping an eye on those sneaky ducks. It's a tough job, but
-        someone's got to keep those quackers in line!
+        On the bright side, sunbathing is our shared hobby, alongside a shared
+        mission of keeping those cats and ducks in check. It’s a tough job, but
+        hey, someone’s got to do it! Together, we’re ready for anything—fun,
+        frolic, or the occasional fright. Our life? It’s a tail-wagging tale of
+        adventure and affection!
       </p>
     </motion.section>
   );

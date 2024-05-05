@@ -60,7 +60,37 @@ const Intro = () => {
         </div>
       </div>
 
-      <motion.h1
+      {theme === "dark" ? (
+        <motion.h1
+          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <span className="font-bold">Woof Woof, I'm Popi.</span> I'm a{" "}
+          <span className="font-bold">Cheeky Chiweenie</span> with{" "}
+          <span className="font-bold">6 years</span> of experience. I enjoy
+          snacking{" "}
+          <span className="italic">carrots, parma ham and beef jerky</span>, and
+          I always collect the <span className="underline">cheese tax</span>.
+        </motion.h1>
+      ) : (
+        <motion.h1
+          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <span className="font-bold">Hey there, I'm Rizsi.</span> As a{" "}
+          <span className="font-bold">
+            5.5-year-old Terrier-Australian Shepherd Mix
+          </span>
+          , I have a knack for{" "}
+          <span className="font-bold">keen observation</span>. I love watching
+          the world from our <span className="italic">balcony</span> and can
+          never resist a good <span className="underline">game of ball</span>.
+        </motion.h1>
+      )}
+
+      {/* <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -71,7 +101,7 @@ const Intro = () => {
         snacking{" "}
         <span className="italic">carrots, parma ham and beef jerky</span>, and I
         always collect the <span className="underline">cheese tax</span>.
-      </motion.h1>
+      </motion.h1> */}
 
       <motion.div
         className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row"
